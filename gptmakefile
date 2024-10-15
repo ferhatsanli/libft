@@ -1,0 +1,28 @@
+# Derleyici ve bayraklar
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
+# Dosya isimleri
+SRC = main.c
+TEST = $(filter %.c,$(MAKECMDGOALS)) # test komutunda verilen c dosyasını alır
+HEADER = libft.h
+OBJ = $(SRC:.c=.o) $(TEST:.c=.o)
+
+# Hedefler
+all: test
+
+# Test hedefi
+test: $(OBJ)
+	$(CC) $(CFLAGS) -o test $(OBJ)
+
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Temizlik
+clean:
+	rm -f *.o
+
+fclean: clean
+	rm -f test
+
+re: fclean all
