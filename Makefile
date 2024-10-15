@@ -6,17 +6,19 @@
 #    By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 17:07:32 by fsanli            #+#    #+#              #
-#    Updated: 2024/10/08 19:23:33 by fsanli           ###   ########.fr        #
+#    Updated: 2024/10/10 12:24:51 by fsanli           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # <<<VARIABLES>>>
+TESTSRC				:= $(wildcard ft_*.c)
 NAME				= libft.a
 CC					= cc
 CFLAGS				= -Wall -Wextra -Werror -I
 SRC					= src/
 SRCS				= ft_*.c
 OBJS				= $(SRCS:.c=.o)
+
 
 
 all: $(NAME)
@@ -51,3 +53,5 @@ test:				testvars
 testvars:
 						echo "Setting environment vars for test"
 						echo "$<"
+
+
