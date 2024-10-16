@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 18:39:47 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/15 23:08:36 by fsanli           ###   ########.fr       */
+/*   Created: 2024/10/15 21:59:22 by fsanli            #+#    #+#             */
+/*   Updated: 2024/10/16 14:29:18 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*d;
-	const char	*s;
+	const void	*dest_end;
+	const void	*src_end;
+	void		*temp;
 
-	d = (char *) dest;
-	s = (const char *) src;
-	while (n--)
+	dest_end = dest + n;
+	src_end = src + n;
+	if (dest <= src_end && src <= dest_end)
 	{
-		*d++ = *s++;
+		temp = malloc(n);
+		ft_memcpy(temp, src, n);
+		ft_memcpy(dest, temp, n);
+	}
+	else
+	{
+		ft_memcpy(dest, src, n);
 	}
 	return (dest);
 }

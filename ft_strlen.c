@@ -6,7 +6,7 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 17:36:30 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/09 17:44:51 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/10/16 15:00:55 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while (s[len] != "\0")
+	while (s[len] != '\0')
 		len++;
 	return (len);
 }
