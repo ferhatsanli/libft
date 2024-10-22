@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:51:41 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/17 12:44:36 by fsanli           ###   ########.fr       */
+/*   Created: 2024/10/22 16:56:23 by fsanli            #+#    #+#             */
+/*   Updated: 2024/10/22 20:47:05 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isprint(int c)
+int	ft_toupper(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c) || c == ' ' || ft_ispunct(c))
-		return (1);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
 	else
-		return (0);
+		return (c);
 }

@@ -6,11 +6,11 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 18:35:18 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/09 18:38:10 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/10/22 21:07:34 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

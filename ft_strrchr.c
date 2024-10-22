@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 13:51:41 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/17 12:44:36 by fsanli           ###   ########.fr       */
+/*   Created: 2024/10/22 21:41:22 by fsanli            #+#    #+#             */
+/*   Updated: 2024/10/22 22:03:00 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c) || c == ' ' || ft_ispunct(c))
-		return (1);
-	else
-		return (0);
+	int	i;
+
+	i = ft_strlen(s);
+	if (i == 0)
+		return (NULL);
+	while (i >= 0)
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i--;
+	}
+	return (NULL);
 }
