@@ -6,7 +6,7 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:24:28 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/23 15:05:38 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/10/23 15:27:50 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,21 @@ int	ft_atoi(const char *nptr)
 	size_t	i;
 	int		res;
 	int		mul;
-	char	test_c;
+	char	dig;
 
 	end = ft_strlen(nptr) - 1;
-	printf("end => %ld\n", end);
 	i = 0;
 	res = 0;
 	mul = 1;
-	while (end - i >= 0)
+	while (i <= end)
 	{
-		test_c = (char)nptr[end - i];
-		printf("i => %ld, char => %c\n", i, test_c);
-		if (ft_isdigit(test_c))
-			res += ((nptr[end - i] - 48) * mul);
+		dig = (char)nptr[end - i];
+		if (ft_isdigit(dig))
+			res += ((dig - 48) * mul);
+		else if (dig == '-' && i == end)
+			res *= -1;
+		else if (dig == '+' && i == end)
+			res;
 		else
 			return (0);
 		mul *= 10;
