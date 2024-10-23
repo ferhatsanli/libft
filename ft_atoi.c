@@ -6,7 +6,7 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:24:28 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/23 15:27:50 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/10/23 15:36:35 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *nptr)
 		else if (dig == '-' && i == end)
 			res *= -1;
 		else if (dig == '+' && i == end)
-			res;
+			res *= 1;
 		else
 			return (0);
 		mul *= 10;
