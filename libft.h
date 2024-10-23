@@ -6,7 +6,7 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:03:31 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/22 22:23:45 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/10/23 12:06:52 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
