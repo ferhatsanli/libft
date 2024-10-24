@@ -6,7 +6,7 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:41:22 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/22 22:03:00 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/10/24 23:30:42 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s);
-	if (i == 0)
+	if (i == 0 || !c)
 		return (NULL);
 	while (i >= 0)
 	{

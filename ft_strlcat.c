@@ -6,7 +6,7 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:18:29 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/24 19:50:47 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/10/24 22:10:14 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	len_dst;
 	size_t	len_src;
 	size_t	i;
-	char	*temp;
 
 	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);

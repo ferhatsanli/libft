@@ -6,7 +6,7 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 18:35:18 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/22 21:07:34 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/10/24 22:32:03 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ void	ft_bzero(void *s, size_t n)
 	size_t			i;
 	unsigned char	*ptr;
 
+	if (!s)
+		return ;
 	ptr = s;
 	i = 0;
 	while (i < n)
 	{
-		*ptr++ = '\0';
+		*ptr++ = 0;
 	}
 }

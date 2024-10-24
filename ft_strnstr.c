@@ -6,7 +6,7 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:30:00 by fsanli            #+#    #+#             */
-/*   Updated: 2024/10/24 19:51:21 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/10/24 22:12:32 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	if (score < len_l)
 		return (NULL);
+	return (0);
 }
