@@ -1,0 +1,13 @@
+$@ -> Current target
+$< -> First dependencie
+$^ -> All dependencies
+$? -> Only got-any-change dependencies
+
+$(MAKECMDGOALS) -> make test ft_memcpy.c => test ft_memcpy.c
+filter %.c, $(MAKECMDGOALS) -> make test ft_memcpy.c -> ft_memcpy.c
+
+in main.c:
+	stdio.h -> printf
+	stdlib.h -> malloc
+
+ls ft_*.c | column -c 70 -> sutunlar halinde listeler ve 70 karakter max

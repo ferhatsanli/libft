@@ -6,7 +6,7 @@
 #    By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 17:07:32 by fsanli            #+#    #+#              #
-#    Updated: 2024/10/22 20:42:47 by fsanli           ###   ########.fr        #
+#    Updated: 2024/10/24 21:09:43 by fsanli           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,12 @@ TESTOUT = test
 CC = gcc
 CFLAGS =  -Wall -Wextra -Werror
 NAME = libft.a
-SRC = 	ft_bzero.c    ft_isascii.c  ft_ispunct.c  ft_memset.c   ft_strlen.c \
-		ft_isalnum.c  ft_isdigit.c  ft_memcpy.c   ft_strlcat.c  ft_strncmp.c \
-		ft_isalpha.c  ft_isprint.c  ft_memmove.c  ft_strlcpy.c  ft_toupper.c \
+SRC = 	ft_atoi.c       ft_isprint.c    ft_memset.c     ft_strnstr.c
+		ft_bzero.c      ft_ispunct.c    ft_strchr.c     ft_strrchr.c
+		ft_isalnum.c    ft_memchr.c     ft_strlcat.c    ft_tolower.c
+		ft_isalpha.c    ft_memcmp.c     ft_strlcpy.c    ft_toupper.c
+		ft_isascii.c    ft_memcpy.c     ft_strlen.c
+		ft_isdigit.c    ft_memmove.c    ft_strncmp.c
 HEADER = libft.h
 OBJ = $(SRC:.c=.o)
 .PHONY: test
