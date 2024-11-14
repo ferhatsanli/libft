@@ -6,7 +6,7 @@
 /*   By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 18:38:11 by fsanli            #+#    #+#             */
-/*   Updated: 2024/11/10 22:24:39 by fsanli           ###   ########.fr       */
+/*   Updated: 2024/11/14 19:23:02 by fsanli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	if (size > SIZE_MAX / nmemb)
 	{
-		printf("oldu>>%ld, %ld\n", nmemb, size);
 		return (NULL);
 	}
 	total = nmemb * size;

@@ -6,7 +6,7 @@
 #    By: fsanli <fsanli@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 17:07:32 by fsanli            #+#    #+#              #
-#    Updated: 2024/11/10 22:22:36 by fsanli           ###   ########.fr        #
+#    Updated: 2024/11/14 19:25:31 by fsanli           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,10 +26,9 @@ SRC				=	\
 				ft_itoa.c       ft_putstr_fd.c  ft_strmapi.c
 CC				= cc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror
 NAME			= libft.a
 
-HEADER			= libft.h
 OBJS			= $(SRC:.c=.o)
 
 all:			$(NAME)
@@ -50,6 +49,7 @@ fclean:			clean
 re:				fclean $(NAME)
 
 test:	fclean
+				$(CFLAGS) = "$(CFLAGS) -I."
 				$(CC) $(CFLAGS) $(SRC) $(TESTC) -o $(TESTOUT)
 				@echo "\n\n"
 				./$(TESTOUT)
